@@ -1,7 +1,7 @@
 module Counter where
 
 import Html exposing (..)
-import Html.Attributes exposing (id)
+import Html.Attributes exposing (id, style)
 import Html.Events exposing (onClick)
 
 -- Model
@@ -23,6 +23,13 @@ view address model =
     [
         h1 [] [text "Mon premier compteur"],
         button [onClick address Decrement] [text "-"],
-        span [] [text (toString model)],
+        span [countStyle] [text (toString model)],
         button [onClick address Increment] [text "+"]
     ]
+
+countStyle: Attribute
+countStyle = 
+    style
+        [ ("font-size", "20px")
+        , ("width", "50px")
+        ]
