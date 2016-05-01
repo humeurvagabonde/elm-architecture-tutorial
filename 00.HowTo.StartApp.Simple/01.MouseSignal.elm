@@ -4,11 +4,6 @@ import Mouse
 import Html exposing (..)
 
 view : (Int, Int) -> Html
-view (x, y) = 
-    text (toString x ++ "," ++ toString y)
 
-
+-- Signal.map : (a -> result) -> Signal a -> Signal result
 main : Signal.Signal Html
-main =
-    -- (a -> result) -> Signal a -> Signal result
-    Signal.map view Mouse.position
