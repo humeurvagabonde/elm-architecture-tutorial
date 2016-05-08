@@ -3,6 +3,7 @@ module State (..) where
 import Html exposing (..)
 import Mouse
 
+-- Affiche le nombre de clicks de souris a l'ecran
 
 view : Int -> Html
 
